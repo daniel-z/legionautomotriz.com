@@ -1,0 +1,25 @@
+{
+  "name": "theautobodyshop",
+  "version": "0.1.0",
+  "ignore": [
+    ".jshintrc",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery": "*",
+    "vegas": "*",
+    "angular": "*",
+    "angular-route": "*",
+    "angular-animate": "*",
+    "animate.css": "*"
+  },
+  "authors": [
+    "Daniel Zamorano <daniel.zamorano.m@gmail.com>"
+  ],
+  "license": "MIT"
+}
