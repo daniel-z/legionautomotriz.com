@@ -16,7 +16,8 @@
     "angular": "*",
     "angular-route": "*",
     "angular-animate": "*",
-    "animate.css": "*"
+    "animate.css": "*",
+    "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git"
   },
   "authors": [
     "Daniel Zamorano <daniel.zamorano.m@gmail.com>"

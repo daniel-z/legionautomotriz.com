@@ -1,3 +1,18 @@
+
+// Colors
+
+@baseColorTransparency: rgba(0,0,0,.7);
+@blue0: #4D1379;
+@blue1: #9026CF;
+@blue2: #FFD9FC;
+
+@Admired: #7C061C;
+@SleepingOceanFloor: #0F032B;
+@RockBlue: #61339F;
+@LavvySavvy: #C4A6EC;
+@Ebony: #292420;
+@ViolentBlue: #4D1379;
+
 html, body {
   height: 100%;
   width: 100%;
@@ -9,19 +24,15 @@ html, body {
 }
 
 body {
-  background-color: #000;
+  background-color: @Ebony;
 }
 
 a {
   color: #fff;
 }
 
-@baseColorTransparency: rgba(0,0,0,.7);
-@blue0: #4D1379;
-@blue1: #9026CF;
-@blue2: #FFD9FC;
-
 .content {
+  color: #fff;
 }
 
 header {
@@ -35,65 +46,188 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  font-family: 'Della Respira',serif;
+  text-transform: uppercase;
+  margin: 10px 0;
 }
 
-h1, h2 {
-  margin: 0;
+h1 { font-size: 2.4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+
+header {
+  background-color: rgba(77, 19, 121, .6);
+  overflow: auto;
+  padding: 20px;
+  text-align: center;
+
+  h1, h2 {
+    color: #fff;
+    margin: 0;
+  }
+
+  h1 {
+    text-shadow: 0 0 15px #000;
+    margin: 7px 30px;
+    display: block;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .logo {
+    float: right;
+    position: absolute;
+    top: 20px;
+    font-size: 1em;
+  }
 }
 
+.logo {
+  h2 {
+    color: #fff;
+    font-family: 'Della Respira',serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+body > .content {
+  font-size: 1em;
+  padding-bottom: 100px;
+}
+
+div.alert {
+  font-size: 1.6em;
+
+  strong {
+    margin-right: 5px;
+  }
+}
+
+section {
+  min-height: 700px;
+  margin-bottom: 100px;
+  .content {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    padding: 30px 0 60px;
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Home
 // ---------------------------------------------------------------------------
 .home {
-  header {
-    background-color: rgba(77, 19, 121, .6);
-    overflow: auto;
-    padding: 20px;
-    text-align: center;
-
-    h1 {
-      font-size: 2.4em;
-      text-shadow: 0 0 15px #000;
-      margin: 7px 30px;
-      display: block;
-      font-family: 'Della Respira',serif;
-      color: #fff;
-      text-transform: uppercase;
-    }
-
-    .logo {
-      float: right;
-      position: absolute;
-      top: 20px;
+  .content {
+    width: 60%;
+    background-color: rgba(0,0,0,.5);
+    .proximamente {
       font-size: 1em;
+      a {
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 21px;
+        background-color: #CB0013;
+        border: 1px solid #111;
+        font-weight: normal;
+        font-size: 1.6em;
+        padding: 10px 15px;
+        box-shadow: 0px 0px 14px #000;
+      }
+
+      h3 {
+        text-transform: capitalize;
+        font-family: 'Qwigley',cursive;
+        color: #fff;
+        font-size: 12em;
+        text-shadow: 0 0 10px #4D1379;
+        margin: 0;
+      }
     }
   }
+}
 
-  .logo {
-    h2 {
-      color: #fff;
-      font-family: 'Della Respira',serif;
+// ---------------------------------------------------------------------------
+// Content
+// ---------------------------------------------------------------------------
+.contact {
+  .content {
+    background-color: rgba(red(@Ebony), green(@Ebony), blue(@Ebony), 0.7);
+    width: 60%;
+    margin: 20px auto;
+    padding: 40px;
+
+    p {
+      font-size: 1.6em;
       text-transform: uppercase;
-      font-weight: normal;
-      font-size: 2em;
-      text-align: center;
     }
-  }
 
-  .proximamente {
-    font-family: 'Qwigley',cursive;
-    font-size: 1em;
-    background-color: rgba(0,0,0,.23);
-    margin: 80px auto;
-    width: 100%;
+    div.price {
+      background-color: @Ebony;
+      margin: 30px 0;
+      border: 1px solid #b9b9b9;
+      padding: 20px;
 
-    h3 {
+      ul {
+        text-align: center;
+        margin: 0 auto;
+        display: inline-block;
+        list-style: disc;
+        font-size: 1.6em;
+
+        li {
+          text-transform: capitalize;
+          width: auto;
+          display: block;
+
+          &:before {
+            content: "- "
+          }
+        }
+      }
+    }
+
+    form input.ng-invalid.ng-dirty {
+      background-color: #FA787E;
       color: #fff;
-      font-size: 12em;
-      text-shadow: 0 0 10px #4D1379;
-      margin: 0;
     }
+
+    form input.ng-valid.ng-dirty {
+      background-color: #78FA89;
+    }
+
+    .alert {
+      font-size: 1.5em;
+      display: none;
+    }
+
+    .form-control, .input-group {
+      margin: 0 auto 10px auto;
+      width: 60%;
+    }
+
+    .input-group {
+      width: 30%;
+      display: inline-table;
+    }
+
+    .input-group .form-control {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    button {
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+
   }
 }
 
