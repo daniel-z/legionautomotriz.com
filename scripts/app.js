@@ -52,7 +52,7 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
   function ($scope, $http) {
     $.vegas('stop')
       ({
-        src:'/images/home-slider/FORDMATTE.jpg'
+        src:'/images/home-slider/Audired.jpg'
       })('overlay');
 
     $scope.emailForm = {};
