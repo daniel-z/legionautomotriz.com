@@ -67,7 +67,7 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
       email = "Email: " + emailData.email,
       telefono = "Teléfono: " + emailData.phone,
       mensaje = "Mensaje: " + emailData.message,
-      sign = "Legion | The Auto Body Shop | Web Form ",
+      sign = "Legion Automotriz | Web Form ",
       lineBreak = {
         html:"<br/>",
         text: "\n"
@@ -98,13 +98,13 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
         "message": {
           "html": message.html || undefined,
           "text": message.text || undefined,
-          "subject": "The Auto Body Shop | Web Form",
+          "subject": "Legion Automotriz | Web Form",
           "from_email": $scope.emailForm.email,
           "from_name": $scope.emailForm.name,
           "to": [
             {
-              "email": "ventas@theautobodyshop.mx",
-              "name": "Ventas | The Auto Body Shop",
+              "email": "ventas@legionautomotriz.com",
+              "name": "Ventas | Legion Automotriz",
               "type": "to"
             }
           ],
@@ -126,6 +126,7 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
       success(function(data, status, headers, config) {
         if(data[0].status === 'error' || data[0].status === 'rejected') {
           $('.alert.alert-danger').show();
+          console.log(data, status);
         }
         else if(data[0].status === 'sent') {
           $('.alert.alert-success').show();
@@ -133,6 +134,7 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
       }).
       error(function(data, status, headers, config) {
         $('.alert.alert-danger').show();
+        console.log(data, status);
       });
     };
 
