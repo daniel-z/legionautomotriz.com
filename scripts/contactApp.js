@@ -1,54 +1,8 @@
 /* global angular, $ */
 
-var theAutoBodyShopApp = angular.module('theAutoBodyShopApp', ['ngRoute', 'ngAnimate']);
+var contactoLegionApp = angular.module('contactoLegionApp', ['ngRoute', 'ngAnimate']);
 
-theAutoBodyShopApp.directive('onFinishRender',
-  function ($timeout) {
-    return {
-      restrict: 'A',
-      link: function (scope, element, attr) {
-        if (scope.$last === true) {
-          $timeout(function () {
-            scope.$emit('ngRepeatFinished');
-          });
-        }
-      }
-    };
-  });
-
-theAutoBodyShopApp.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-    when('/home', {
-      templateUrl: 'partials/home.html',
-      controller: 'homeController'
-    }).
-    when('/contact', {
-      templateUrl: 'partials/contact.html',
-      controller: 'contactController'
-    }).
-    otherwise({
-      redirectTo: '/home'
-    });
-}]);
-
-// HOME PAGE
-theAutoBodyShopApp.controller('homeController', ['$scope', '$http',
-  function ($scope, $http) {
-    var backgroundConfig = $http.get('data/home-slider-data.json');
-    $scope.page = "home";
-
-    backgroundConfig.success(function(data) {
-      $scope.backgrounds = data;
-      $.vegas('destroy')
-      ('slideshow', {
-        delay:3000,
-        backgrounds: $scope.backgrounds
-      })('overlay');
-    });
-  }]);
-
-// CONTACT PAGE
-theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
+contactoLegionApp.controller('contactController', ['$scope', '$http',
   function ($scope, $http) {
     $.vegas('stop')
       ({
@@ -123,19 +77,19 @@ theAutoBodyShopApp.controller('contactController', ['$scope', '$http',
       var email = $scope.generateEmail(emailData);
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', email).
-      success(function(data, status, headers, config) {
-        if(data[0].status === 'error' || data[0].status === 'rejected') {
+        success(function(data, status, headers, config) {
+          if(data[0].status === 'error' || data[0].status === 'rejected') {
+            $('.alert.alert-danger').show();
+            console.log(data, status);
+          }
+          else if(data[0].status === 'sent') {
+            $('.alert.alert-success').show();
+          }
+        }).
+        error(function(data, status, headers, config) {
           $('.alert.alert-danger').show();
           console.log(data, status);
-        }
-        else if(data[0].status === 'sent') {
-          $('.alert.alert-success').show();
-        }
-      }).
-      error(function(data, status, headers, config) {
-        $('.alert.alert-danger').show();
-        console.log(data, status);
-      });
+        });
     };
 
   }]);
