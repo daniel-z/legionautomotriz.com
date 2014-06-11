@@ -46,8 +46,9 @@ a {
 nav {
   width: 80%;
   display: inline-block;
-  margin-top: 15px;
   height: 50px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
 
   a {
     border: 1px solid #fff;
@@ -56,6 +57,15 @@ nav {
     padding: 10px;
     border-radius: 4px;
     text-transform: uppercase;
+    box-shadow: 0 0 12px #fff;
+
+    &:first-child {
+      border-radius: 6px 0;
+    }
+
+    &:last-child {
+      border-radius: 0 6px;
+    }
 
     &:hover {
       background-color: #CB0013;
@@ -291,10 +301,48 @@ section {
   background-image: url('../../images/moulin_@2X.png');
   background-repeat: repeat;
   .content {
-    div.small-section {
-      margin: 50px auto;
-      width: 70%;
+    section {
+      margin: auto;
+      width: 100%;
+      height: 600px;
       text-align: justify;
+      margin: 0px;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      overflow: auto;
+      min-height: 900px;
+      article {
+        top: 20px;
+        position: absolute;
+
+        &.right {
+          right: 20px;
+        }
+
+        &.lefft {
+          left: 20px;
+        }
+      }
+
+      &.mision {
+        background: url(../../images/camaro.jpg) 35% 18% no-repeat fixed;
+      }
+
+      &.vision {
+        background: url(../../images/mustang.jpg) -4% 10% no-repeat fixed;
+        background-size: 1800px;
+      }
+
+      &.filosofia {
+        background: #000 url(../../images/AudiTT.jpg) 0% 0 no-repeat fixed;
+      }
+
+      article {
+        width: 50%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
 
       h2, p {
         margin: 20px auto;
