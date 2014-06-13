@@ -17,7 +17,6 @@
     "angular-route": "*",
     "angular-animate": "*",
     "animate.css": "*",
-    "scrolly": "https://github.com/Victa/scrolly.git",
     "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git"
   },
   "authors": [
