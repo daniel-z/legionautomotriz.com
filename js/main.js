@@ -449,12 +449,12 @@ jQuery(function ($) {
             nope: 'js/placeholder.js',
             complete: function () {
                 if (!Modernizr.placeholder) {
-                    Placeholders.init({
-                        live: true,
-                        hideOnFocus: false,
-                        className: "yourClass",
-                        textColor: "#999"
-                    });
+                    // Placeholders.init({
+                    //     live: true,
+                    //     hideOnFocus: false,
+                    //     className: "yourClass",
+                    //     textColor: "#999"
+                    // });
                 }
             }
         }]);
@@ -481,7 +481,7 @@ jQuery(function ($) {
         BRUSHED.filter();
         BRUSHED.fancyBox();
         BRUSHED.contactForm();
-        BRUSHED.tweetFeed();
+        // BRUSHED.tweetFeed();
         BRUSHED.scrollToTop();
         BRUSHED.utils();
         BRUSHED.accordion();
