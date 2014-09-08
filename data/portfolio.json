@@ -1,0 +1,55 @@
+[{
+    "class": "laminado",
+    "data-group": "laminado",
+    "title": "The City",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}, {
+    "class": "laminado",
+    "data-group": "laminado",
+    "title": "The City",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}, {
+    "class": "detallado",
+    "data-group": "detallado",
+    "title": "Detallado",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}, {
+    "class": "detallado",
+    "data-group": "detallado",
+    "title": "The City",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}, {
+    "class": "pintura",
+    "data-group": "pintura",
+    "title": "The City",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}, {
+    "class": "pintura",
+    "data-group": "pintura",
+    "title": "The City",
+    "href": "img/work/full/image-01-full.jpg",
+    "overlay-img": "",
+    "overlay-img-thumb": "",
+    "img-src": "img/work/thumbs/image-01.jpg",
+    "alt": ""
+}]
