@@ -49,21 +49,24 @@ jQuery(function ($) {
     BRUSHED.slider = function () {
         $.getJSON('data/slider.json', function (sliderData) {
             $.each(sliderData, function (index, slider) {
-                if (!slider.title || slider.title === "default") {
-                    slider.title = '<div class="slide-content">' +
-                        '<div class="llogo"></div>' +
-                        '</div>';
-                }
+                slider.title = '<div class="slide-content">' +
+                    '<div class="llogo"></div>' +
+                    '<div class="title">'+
+                        '<div class="row">'+
+                            '<p class="span11">'+ slider.title +'</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
             });
 
             $.supersized({
                 // Functionality
                 slideshow: 1, // Slideshow on/off
-                autoplay: 1, // Slideshow starts playing automatically
+                autoplay: 0, // Slideshow starts playing automatically
                 start_slide: 1, // Start slide (0 is random)
                 stop_loop: 0, // Pauses slideshow on last slide
                 random: 0, // Randomize slide order (Ignores start slide)
-                slide_interval: 3000, // Length between transitions
+                slide_interval: 5000, // Length between transitions
                 transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
                 transition_speed: 300, // Speed of transition
                 new_window: 1, // Image links open in new window/tab
@@ -85,6 +88,8 @@ jQuery(function ($) {
                 slide_links: 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
                 thumb_links: 0, // Individual thumb links for each slide
                 thumbnail_navigation: 0, // Thumbnail navigation
+
+                // all data in the json is implemented here
                 slides: sliderData,
 
                 // Theme Options
