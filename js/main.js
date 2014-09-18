@@ -51,12 +51,12 @@ jQuery(function ($) {
             $.each(sliderData, function (index, slider) {
                 slider.title = '<div class="slide-content">' +
                     '<div class="llogo"></div>' +
-                    '<div class="title">'+
-                        '<div class="row">'+
-                            '<p class="span11">'+ slider.title +'</p>' +
-                        '</div>' +
+                    '<div class="title ' + slider['title-class'] + '">' +
+                    '<div class="row">' +
+                    '<p class="span11">' + slider.title + '</p>' +
                     '</div>' +
-                '</div>';
+                    '</div>' +
+                    '</div>';
             });
 
             $.supersized({

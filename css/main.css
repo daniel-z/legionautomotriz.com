@@ -477,6 +477,16 @@ h3.spec {
 	line-height: normal;
 }
 
+@media (max-width: 767px) {
+	#home-slider .slider-text {
+		top: 25%;
+	}
+
+	#home-slider .slide-content .title.promo {
+		width: 70%;
+	}
+}
+
 #home-slider .slide-content .llogo {
 	background-image: url('../img/llogo.png');
 	background-size: 300px;
@@ -492,6 +502,13 @@ h3.spec {
 
 #home-slider .slide-content .title {
 	background-color: rgba(0, 0, 0, .5);
+}
+
+#home-slider .slide-content .title.promo p {
+	font-family: 'Coda';
+	font-size: 40px;
+	color: #fff;
+	text-transform: capitalize;
 }
 
 #home-slider .slide-content .title p {
