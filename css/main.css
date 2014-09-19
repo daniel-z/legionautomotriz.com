@@ -476,7 +476,9 @@ h3.spec {
 	letter-spacing: normal;
 	line-height: normal;
 }
-
+#home-slider .slider-text {
+		top: 35%;
+}
 @media (max-width: 767px) {
 	#home-slider .slider-text {
 		top: 40%;
@@ -521,7 +523,7 @@ h3.spec {
 }
 
 #home-slider .slide-content .title {
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(0, 0, 0, .7);
 	font-family: 'Handlee', serif;
 	text-transform: initial;
 	font-size: 25px;
