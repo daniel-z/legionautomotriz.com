@@ -47,18 +47,7 @@ jQuery(function ($) {
     // --------------------------------------------------
 
     BRUSHED.slider = function () {
-        $.getJSON('data/slider.json', function (sliderData) {
-            $.each(sliderData, function (index, slider) {
-                slider.title = '<div class="slide-content">' +
-                    '<div class="llogo"></div>' +
-                    '<div class="title ' + slider['title-class'] + '">' +
-                    '<div class="row">' +
-                    '<p class="span11">' + slider.title + '</p>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
-            });
-
+        var initializeSupersized = function (sliderData) {
             $.supersized({
                 // Functionality
                 slideshow: 1, // Slideshow on/off
@@ -96,6 +85,20 @@ jQuery(function ($) {
                 progress_bar: 0, // Timer for each slide
                 mouse_scrub: 0
             });
+        };
+
+        $.getJSON('data/slider.json', function (sliderData) {
+            $.ajax({
+                url: 'template/slider-title.html',
+                dataType: 'html',
+                success: function (templateHTML) {
+                    var tmp = _.template(templateHTML);
+                    $.each(sliderData, function (index, slider) {
+                        slider.title = tmp(slider);
+                    });
+                    initializeSupersized(sliderData);
+                },
+            });
         });
     }
 
@@ -114,70 +117,69 @@ jQuery(function ($) {
     // --------------------------------------------------
 
     BRUSHED.filter = function () {
-        var portfolio = '';
-        $.getJSON('data/portfolio.json', function (portfolioData) {
-            $.each(portfolioData, function (index, project) {
-                var template = '<li class="item-thumbs span3 ' + project.class + '">' +
-                    '<a class="hover-wrap fancybox"' +
-                    'data-fancybox-group="' + project['data-group'] + '"' +
-                    'title="' + project.title + '"' +
-                    'href="' + project.href + '">' +
-                    '<span class="overlay-img">' + project['overlay-img'] + '</span>' +
-                    '<span class="overlay-img-thumb font-icon-plus">' +
-                    project['overlay-img-thumb'] +
-                    '</span>' +
-                    '</a>' +
-                    '<img src="' + project['img-src'] + '" alt="">' +
-                    '</li>';
-                portfolio = portfolio + template;
-            });
+        var portfolio = '',
+            initializeFilter = function () {
+                if ($('#projects').length > 0) {
+                    var $container = $('#projects');
 
-            $('#projects #thumbs').append(portfolio);
-
-            if ($('#projects').length > 0) {
-                var $container = $('#projects');
-
-                $container.imagesLoaded(function () {
-                    $container.isotope({
-                        // options
-                        animationEngine: 'best-available',
-                        itemSelector: '.item-thumbs',
-                        layoutMode: 'fitRows'
+                    $container.imagesLoaded(function () {
+                        $container.isotope({
+                            // options
+                            animationEngine: 'best-available',
+                            itemSelector: '.item-thumbs',
+                            layoutMode: 'fitRows'
+                        });
                     });
-                });
 
-                // filter items when filter link is clicked
-                var $optionSets = $('#options .option-set'),
-                    $optionLinks = $optionSets.find('a');
+                    // filter items when filter link is clicked
+                    var $optionSets = $('#options .option-set'),
+                        $optionLinks = $optionSets.find('a');
 
-                $optionLinks.click(function () {
-                    var $this = $(this);
-                    // don't proceed if already selected
-                    if ($this.hasClass('selected')) {
+                    $optionLinks.click(function () {
+                        var $this = $(this);
+                        // don't proceed if already selected
+                        if ($this.hasClass('selected')) {
+                            return false;
+                        }
+                        var $optionSet = $this.parents('.option-set');
+                        $optionSet.find('.selected').removeClass('selected');
+                        $this.addClass('selected');
+
+                        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+                        var options = {},
+                            key = $optionSet.attr('data-option-key'),
+                            value = $this.attr('data-option-value');
+                        // parse 'false' as false boolean
+                        value = value === 'false' ? false : value;
+                        options[key] = value;
+                        if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
+                            // changes in layout modes need extra logic
+                            changeLayoutMode($this, options)
+                        } else {
+                            // otherwise, apply new options
+                            $container.isotope(options);
+                        }
                         return false;
-                    }
-                    var $optionSet = $this.parents('.option-set');
-                    $optionSet.find('.selected').removeClass('selected');
-                    $this.addClass('selected');
+                    });
+                }
+            };
 
-                    // make option object dynamically, i.e. { filter: '.my-filter-class' }
-                    var options = {},
-                        key = $optionSet.attr('data-option-key'),
-                        value = $this.attr('data-option-value');
-                    // parse 'false' as false boolean
-                    value = value === 'false' ? false : value;
-                    options[key] = value;
-                    if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-                        // changes in layout modes need extra logic
-                        changeLayoutMode($this, options)
-                    } else {
-                        // otherwise, apply new options
-                        $container.isotope(options);
-                    }
+        $.getJSON('data/portfolio.json', function (portfolioData) {
+            // get the template html
+            var templateHTML;
 
-                    return false;
-                });
-            }
+            // load portfolio items
+            $.ajax({
+                url: 'template/portfolio-item.html',
+                dataType: 'html',
+                success: function (templateHTML) {
+                    var tmp = _.template(templateHTML);
+                    $.each(portfolioData, function (index, project) {
+                        $('#projects #thumbs').append(tmp(project));
+                    });
+                    initializeFilter();
+                },
+            });
         });
     }
 
