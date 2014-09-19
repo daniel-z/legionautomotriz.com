@@ -479,11 +479,7 @@ h3.spec {
 
 @media (max-width: 767px) {
 	#home-slider .slider-text {
-		top: 25%;
-	}
-
-	#home-slider .slide-content .title.promo {
-		width: 70%;
+		top: 40%;
 	}
 }
 
@@ -500,34 +496,46 @@ h3.spec {
 	background-position-x: 7px;
 }
 
-#home-slider .slide-content .title {
-	background-color: rgba(0, 0, 0, .5);
+#home-slider .slide-content .title.promo {
+	font-family: 'Exo', sans-serif;
+	font-weight: 400;
+	font-size: 26px;
+}
+
+@media (max-width: 767px) {
+	#home-slider .slide-content .title.promo {
+		width: 450px;
+	}
 }
 
 #home-slider .slide-content .title.promo p {
-	font-family: 'Coda';
 	font-size: 40px;
 	color: #fff;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
-#home-slider .slide-content .title p {
+@media (max-width: 767px) {
+	#home-slider .slide-content .title.promo p {
+		font-size: 25px;
+	}
+}
+
+#home-slider .slide-content .title {
+	background-color: rgba(0, 0, 0, .5);
 	font-family: 'Handlee', serif;
 	text-transform: initial;
 	font-size: 25px;
-	/*min-width: 200px;*/
 	padding: 20px;
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	#home-slider .slide-content .title {
-		width: 40%;
+		width: 450px;
+		font-size: 19px;
 		margin: 0 auto;
 	}
 }
-
-/* Landscape phones and down */
 @media (max-width: 480px) {
 	#home-slider .slide-content .title {
 		display: none;
