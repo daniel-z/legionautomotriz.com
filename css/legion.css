@@ -1,0 +1,155 @@
+
+
+.hidden {
+    display: none;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+    Home Slider Styles
+----------------------------------------------------------------------------------------------------
+*/
+#home-slider .slide-content {
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    font-size: 48px;
+    display: inline-block;
+    letter-spacing: normal;
+    line-height: normal;
+}
+#home-slider .slider-text {
+        top: 35%;
+}
+@media (max-width: 767px) {
+    #home-slider .slider-text {
+        top: 40%;
+    }
+}
+
+#home-slider .slide-content .llogo {
+    background-image: url('../img/llogo.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    min-width: 314px;
+    min-height: 157px;
+    display: inline-block;
+    clear: both;
+    margin: auto;
+    background-position-y: -53px;
+    background-position-x: 7px;
+}
+
+#home-slider .slide-content .title.promo {
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+@media (max-width: 767px) {
+    #home-slider .slide-content .title.promo {
+        width: 450px;
+    }
+}
+
+#home-slider .slide-content .title.promo p {
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    #home-slider .slide-content .title.promo p {
+        font-size: 25px;
+    }
+}
+
+#home-slider .slide-content .title {
+    background-color: rgba(0, 0, 0, .7);
+    font-family: 'Handlee', serif;
+    text-transform: initial;
+    font-size: 25px;
+    padding: 20px;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #home-slider .slide-content .title {
+        width: 450px;
+        font-size: 19px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 480px) {
+    #home-slider .slide-content .title {
+        display: none;
+    }
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------
+    Contact Form Styles
+----------------------------------------------------------------------------------------------------
+*/
+#contact-form input.ng-invalid {
+    border: 1px dashed #DE5E60;
+    background: #000;
+    color: #DE5E60;
+}
+#contact-form.success span,
+#contact-form span {
+    display: none;
+    font-size: 17px;
+    padding: 10px;
+    clear: both;
+    margin: 5px 0;
+}
+#contact-form.ng-invalid-required span.required,
+#contact-form.error span.error {
+    display: block;
+    color: #DE5E60;
+    border: 1px solid #DE5E60;
+}
+#contact-form.success span.success {
+    display: block;
+    border: 1px solid #7F8289;
+}
+#contact-form .clean,
+#contact-form .submit {
+    border: none;
+}
+#contact-form .submit[disabled],
+#contact-form .submit[disabled]:hover {
+    color: #4F5053;
+    background-color: #3C3F45;
+}
+#contact-form .clean:hover {
+    background: #b9b9b9;
+    color: #000;
+}
+#contact-form .clean,
+#contact-form .submit {
+    background: #3C3F45;
+    color: #23262C;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    margin-top: 30px;
+
+    -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+       -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+         -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+            transition: background 0.1s linear 0s, color 0.1s linear 0s;
+}
+
+#contact-form .clean:hover,
+#contact-form .submit:hover {
+    background: #DE5E60;
+    color: #FFFFFF;
+}

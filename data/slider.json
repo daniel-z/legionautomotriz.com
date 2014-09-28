@@ -1,49 +1,49 @@
 [{
-    "title_class": "promo",
-    "image": "img/slider/black_rims.jpg",
-    "title": "Plastifica tu rodado desde <em>$1,800!</em> <br/> escoge el color y diseño que prefieras",
-    "thumb": "",
-    "url": ""
+  "title_class": "promo",
+  "image": "img/slider/black_rims.jpg",
+  "title": "Plastifica tu rodado desde <em>$1,800!</em> <br/> escoge el color y diseño que prefieras",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/audired.jpg",
-    "title": "Mientras existan individuos encendidos, comprometidos, preocupados, el contagio continuará, poco a poco, y a empujones como todo lo que vale la pena. Y México será otro país, otro. <br/><br/> - Denise Dresser",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/raptor.jpg",
+  "title": "Promocion!!",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/challenger.jpg",
-    "title": "Aquel que no espera vencer, ya esta vencido.<br/><br/> - Benito Juarez",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/audired.jpg",
+  "title": "Mientras existan individuos encendidos, comprometidos, preocupados, el contagio continuará, poco a poco, y a empujones como todo lo que vale la pena. Y México será otro país, otro. <br/><br/> - Denise Dresser",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/hummer.jpg",
-    "title": "No es heroe el que carece de miedo. Lo es quien lo siente, lo enfrenta y lo supera.<br/><br/> -Roberto Gomez Bolaños",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/challenger.jpg",
+  "title": "Aquel que no espera vencer, ya esta vencido.<br/><br/> - Benito Juarez",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/new_mustang.jpg",
-    "title": "Amo el canto del zenzontle pajaro de 400 voces, amo el color del jade, y el enervante perfume de las flores, pero amo más a mi hermano, el hombre.<br/><br/> - Nezahualcoyotl.",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/hummer.jpg",
+  "title": "No es heroe el que carece de miedo. Lo es quien lo siente, lo enfrenta y lo supera.<br/><br/> -Roberto Gomez Bolaños",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/old_mustang.jpg",
-    "title": "El arte más poderoso de la vida, es hacer del dolor un talismán que cura. ¡Una mariposa renace florecida en fiesta de colores!<br/><br/> - Frida Kahlo",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/new_mustang.jpg",
+  "title": "Amo el canto del zenzontle pajaro de 400 voces, amo el color del jade, y el enervante perfume de las flores, pero amo más a mi hermano, el hombre.<br/><br/> - Nezahualcoyotl.",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/ram.jpg",
-    "title": " La única forma de generar riqueza es a través de la educación. Y la única manera para salir adelante es el trabajo y estar al pendiente de él.<br/><br/>  - Carlos Kasuga",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/old_mustang.jpg",
+  "title": "El arte más poderoso de la vida, es hacer del dolor un talismán que cura. ¡Una mariposa renace florecida en fiesta de colores!<br/><br/> - Frida Kahlo",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/slider/raptor.jpg",
-    "title": "",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/slider/ram.jpg",
+  "title": " La única forma de generar riqueza es a través de la educación. Y la única manera para salir adelante es el trabajo y estar al pendiente de él.<br/><br/>  - Carlos Kasuga",
+  "thumb": "",
+  "url": ""
 }]

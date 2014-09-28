@@ -32,6 +32,7 @@
 <link href="css/responsive.css" rel="stylesheet">
 <link href="css/supersized.css" rel="stylesheet">
 <link href="css/supersized.shutter.css" rel="stylesheet">
+<link href="css/legion.css" rel="stylesheet">
 
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
 
@@ -53,6 +54,9 @@
 <!-- Modernizr -->
 <script src="js/modernizr.js"></script>
 <script src="js/analytics.js"></script>
+<script src="js/angular.min.js"></script>
+
+<script src="js/contactApp.js"></script>
 
 </head>
 
@@ -240,64 +244,7 @@
 
 
 <!-- Contact Section -->
-<div id="contact" class="page">
-<div class="container">
-    <!-- Title Page -->
-    <div class="row">
-        <div class="span12">
-            <div class="title-page">
-                <h2 class="title">Get in Touch</h2>
-                <h3 class="title-description">We’re currently accepting new client projects. We look forward to serving you.</h3>
-            </div>
-        </div>
-    </div>
-    <!-- End Title Page -->
-
-    <!-- Contact Form -->
-    <div class="row">
-    	<div class="span9">
-
-        	<form id="contact-form" class="contact-form" action="#">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
-                </p>
-                <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
-                </p>
-                <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
-                </p>
-                <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
-                </p>
-
-                <div id="response">
-
-                </div>
-            </form>
-
-        </div>
-
-        <div class="span3">
-        	<div class="contact-details">
-        		<h3>Contact Details</h3>
-                <ul>
-                    <li><a href="#">hello@brushed.com</a></li>
-                    <li>(916) 375-2525</li>
-                    <li>
-                        Brushed Studio
-                        <br>
-                        5240 Vanish Island. 105
-                        <br>
-                        Unknow
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Contact Form -->
-</div>
-</div>
+<div ng-app="contactoLegionApp" ng-include="'template/contacto.html'"></div>
 <!-- End Contact Section -->
 
 <!-- Twitter Feed -->
@@ -319,7 +266,7 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2013 Brushed. <a href="http://themes.alessioatzeni.com/html/brushed/" title="Brushed | Responsive One Page Template">Brushed Template</a> by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
+	<p class="credits">&copy;2014 <a href="http://www.danielzamorano.com/" title="Daniel Zamorano | Front-end Developer">Daniel Zamorano</a> Improvements to Brushed template by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
 </footer>
 <!-- End Footer -->
 

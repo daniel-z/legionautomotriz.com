@@ -1,0 +1,78 @@
+<script src="js/contactApp.js"></script>
+<div id="contact" class="page">
+    <div class="container">
+        <!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h2 class="title">Contactanos</h2>
+                    <h3 class="title-description">
+                        Nos gustaria saber de ti!, llamanos y conoce nuestro servicio honesto y hamable.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+
+        <!-- Contact Form -->
+        <div class="row">
+          <div class="span9" ng-controller="contactController">
+            <form id="contact-form" class="contact-form" novalidate ng-submit="sendEmail(emailForm)">
+              <span class="required">
+                ¡Por favor llene los campos requeridos correctamente (*)!.
+              </span>
+              <span class="error">
+                ¡Hubo un error favor de contarctarnos al (33) 1591-1598 o al correo: ventas@legionautomotriz.com!
+                <br/>
+                Disculpe las molestias que esto pudiera ocasionarle.
+              </span>
+              <span class="success">
+                ¡Tu correo ha sido enviado, pronto te contactaremos!
+              </span>
+              <input id="contact_name" type="text" class="form-control" placeholder="(*) Nombre"
+                ng-pattern="/^[\sa-zA-Z]+$/"
+                ng-model="emailForm.name" required />
+
+              <input type="email" class="form-control" placeholder="(*) Email"
+                ng-pattern="/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/"
+                ng-model="emailForm.email" required />
+
+              <input type="phone" class="form-control" placeholder="(*) Teléfono"
+                ng-pattern="/^(?=(.*\d){8,})[\d\(\)\s+-]{8,}$/"
+                ng-model="emailForm.phone" required>
+
+              <textarea class="form-control" placeholder="Mensaje"
+                ng-model="emailForm.message"/>
+              </textarea>
+
+              <button class="clean btn-lg" ng-click="cleanForm()">
+                Limpiar
+              </button>
+
+              <button class="submit" type="submit" ng-disabled="contactForm.$invalid">
+                Enviar
+              </button>
+            </form>
+          </div>
+
+          <div class="span3">
+            <div class="contact-details">
+              <h3>Contact Details</h3>
+                  <ul>
+                      <li><a href="#">ventas@legionautomotriz.com</a></li>
+                      <li>(33) 1598-1591</li>
+                      <li>
+                          Legion Automotriz
+                          <br>
+                          Monte Everest #2428
+                          <br>
+                          Guadalajara, Jalisco, M&eacute;xico
+                          <br>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        <!-- End Contact Form -->
+    </div>
+</div>
