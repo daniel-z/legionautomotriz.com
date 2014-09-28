@@ -1,51 +1,276 @@
-<!doctype html>
-<html ng-app="">
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-  <meta charset="UTF-8">
-  <title>Legion Estetica Automotriz ~ Inicio</title>
-  <meta name="description" content="En Legion Estetica Automotriz nos encargamos del cuidado de la pintura, accesorios e interiores de tu vehiculo, capacitamos y formamos a nuestro personal para garantizar el mejor resultado en cada trabajo, entregamos en tiempo y forma. Laminado, Pintura, Detallado y Accesorios">
-  <link rel="stylesheet" href="styles/css/reset.css">
-  <link rel="stylesheet" href="resources/vegas/dist/jquery.vegas.min.css">
-  <link rel="stylesheet" href="resources/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="styles/css/styles.css">
-  <link href='http://fonts.googleapis.com/css?family=Della+Respira|Cinzel|Cinzel+Decorative|Qwigley' rel='stylesheet' type='text/css'>
 
-  <link href='http://fonts.googleapis.com/css?family=Jockey+One|Economica|Shadows+Into+Light|Cinzel' rel='stylesheet' type='text/css'>
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-  <script src="scripts/analytics.js"></script>
-  <script src="resources/jquery/jquery.min.js"></script>
-  <script src="resources/angular/angular.min.js"></script>
-  <script src="resources/vegas/dist/jquery.vegas.min.js"></script>
+<title>Legion Estetica Automotriz ~ Inicio</title>
+
+<meta name="description" content="En Legion Estetica Automotriz nos encargamos del cuidado de la pintura, accesorios e interiores de tu vehiculo, capacitamos y formamos a nuestro personal para garantizar el mejor resultado en cada trabajo, entregamos en tiempo y forma. Laminado, Pintura, Detallado y Accesorios" />
+
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/supersized.css" rel="stylesheet">
+<link href="css/supersized.shutter.css" rel="stylesheet">
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/shortcodes.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/supersized.css" rel="stylesheet">
+<link href="css/supersized.shutter.css" rel="stylesheet">
+<link href="css/legion.css" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Della+Respira|Jockey+One|Cinzel|Cinzel+Decorative|Qwigley' rel='stylesheet' type='text/css'>
+
+<!-- for quotes -->
+<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
+<!-- General Font -->
+<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Fav Icon -->
+<link rel="shortcut icon" href="#">
+<link rel="apple-touch-icon" href="#">
+<link rel="apple-touch-icon" sizes="114x114" href="#">
+<link rel="apple-touch-icon" sizes="72x72" href="#">
+<link rel="apple-touch-icon" sizes="144x144" href="#">
+
+<!-- Modernizr -->
+<script src="js/modernizr.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/angular.min.js"></script>
+
+<script src="js/contactApp.js"></script>
 
 </head>
+
+
 <body>
 
-  <div ng-include="'partials/header.html'"></div>
-  <div ng-include="'partials/nav.html'"></div>
+<div class="ole">
+    <section id="jSplash"><div id="circle"></div></section>
+</div>
 
-  <section class="home">
-    <div class="content">
-      <div class="proximamente">
-        <h3>Proximamente</h3>
-        <a href="/contacto.html" class="btn btn-warning">
-          Suscribete y Recibe Premios por Inauguración
-        </a>
-        <div class="logo">
-          <img src="images/logo/logo-white-md.png" alt="">
-        </div>
-      </div>
+<div id="home-slider">
+    <div class="overlay"></div>
+
+    <div class="slider-text">
+        <div id="slidecaption"></div>
     </div>
-  </section>
-  <div ng-include="'partials/footer.html'"></div>
 
-  <script>
-  </script>
+	<div class="control-nav">
+        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+        <ul id="slide-list"></ul>
+        <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+    </div>
+</div>
 
-  <script src="resources/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="resources/angular-route/angular-route.min.js"></script>
-  <script src="resources/angular-animate/angular-animate.min.js"></script>
-  <script src="resources/jscroll/jquery.jscroll.js"></script>
+<header>
+    <div class="sticky-nav">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/legionesteticaautomotriz"
+                title="Follow Me on Facebook" target="_blank">
+                <span class="font-icon-social-facebook"></span>
+            </a>
+        </div>
+        <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+        <div id="logo">
+        	<a id="goUp" href="#home-slider" title="Legion Automotriz">Legion Automotriz</a>
+        </div>
 
-  <script src="scripts/home.js"></script>
+        <nav id="menu">
+        	<ul id="menu-nav">
+            	<li class="current"><a href="#home-slider">Inicio</a></li>
+                <li><a href="#work">Nuestros Servicios</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Our Work Section -->
+<div id="work" class="page">
+	<div class="container">
+    	<!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h2 class="title">Nuestros Servicios</h2>
+                    <h3 class="title-description">Conoce algunos de nuestros trabajos</h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+
+        <!-- Portfolio Projects -->
+        <div class="row">
+        	<div class="span3">
+            	<!-- Filter -->
+                <nav id="options" class="work-nav">
+                    <ul id="filters" class="option-set" data-option-key="filter">
+                    	<li class="type-work">Portafolio</li>
+                        <li><a href="#filter" data-option-value="*" class="selected">Todas las categorias</a></li>
+                        <li><a href="#filter" data-option-value=".laminado_pintura">Laminado y Pintura</a></li>
+                        <li><a href="#filter" data-option-value=".detallado">Detallado Automotriz</a></li>
+                    </ul>
+                </nav>
+                <!-- End Filter -->
+            </div>
+
+            <div class="span9">
+            	<div class="row">
+                	<section id="projects">
+                    	<ul id="thumbs"></ul>
+                    </section>
+            	</div>
+            </div>
+        </div>
+        <!-- End Portfolio Projects -->
+    </div>
+</div>
+<!-- End Our Work Section -->
+
+<!-- About Section -->
+<div id="about" class="page-alternate">
+<div class="container">
+    <!-- Title Page -->
+    <div class="row">
+        <div class="span12">
+            <div class="title-page">
+                <h2 class="title">Nuestra Empresa</h2>
+                <h3 class="title-description">Atencion al cliente y honestidad, nuestro diferenciador.</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End Title Page -->
+
+    <!-- People -->
+    <div class="row">
+        <!-- Start Profile -->
+        <div class="span4 profile">
+            <h3 class="profile-name">Misi&oacute;n</h3>
+            <p class="profile-description">
+                Desarrollar un negocio de consultoría automotriz que provee servicios de laminado pintura y accesorios. Satisfacer la gran necesidad que tiene el mercado de un taller que tiene sentido de la alta calidad, que forma empleados honestos y que se interesan sinceramente por el cliente.
+                Enfocarnos en formar una empresa con valores que generen un impacto social positivo y de igual manera generar bienestar para todos los involucrados en la operación de esta empresa.
+            </p>
+        </div>
+        <!-- End Profile -->
+        <!-- Start Profile -->
+        <div class="span4 profile">
+            <h3 class="profile-name">Visi&oacute;n</h3>
+            <p class="profile-description">
+                <b>Corto plazo:</b> Ser una empresa rentable. <br/>
+                <b>Mediano plazo:</b> Capacidad económica para operar esta y una sucursal más.<br/>
+                <b>Largo plazo:</b> Convertirnos en una autoridad dentro de la industria de pintura, restauración y accesorios automotrices. Cursos y certificación de profesionales y talleres, en pintura, laminado y detallado.</p>
+            <p class="profile-description"></p>
+            <p class="profile-description"></p>
+        </div>
+        <!-- End Profile -->
+        <!-- Start Profile -->
+    	<div class="span4 profile">
+            <h3 class="profile-name">Filosofia y Valores</h3>
+            <p class="profile-description">
+                Creemos en México, creemos en nuestra gente y luchamos por hacer un país mejor, iniciamos el cambio en nosotros mismos porque sabemos México necesita empresas honestas y de calidad.
+                <dl>
+                    <dt>Ganar - Ganar</dt>
+                    <dd> Buscamos el mejor negocio para cliente y empresa, con cada producto o
+                    servicio vendido el cliente y la empresa debemos ganar y quedar satisfechos.
+                    No se venden servicios innecesarios ni sobre valuados.</dd>
+
+                    <dt>No Discutir</dt>
+                    <dd>La única manera de ganar una discusión es no tenerla. Nos esforzamos por
+                    desarrollar la habilidad de negociación sin discusión.</dd>
+
+                    <dt>Orden y Limpieza</dt>
+                    <dd> La calidad, la salud y el éxito inicia desde la limpieza y el orden.
+                    Nuestro interior se refleja en el exterior.</dd>
+
+                    <dt>Capacitación Continua</dt>
+                    <dd>La mejor manera de ofrecer servicios de calidad e innovadores es obtener
+                    la educación adecuada y aplicarla.</dd>
+
+                    <dt>El Empleado es el elemento más importante</dt>
+                    <dd>Así aseguramos el mejor resultado en todos los servicios y a su vez
+                    la satisfacción del cliente.</dd>
+                </dl>
+            </p>
+        </div>
+        <!-- End Profile -->
+
+    </div>
+    <!-- End People -->
+</div>
+</div>
+<!-- End About Section -->
+
+
+<!-- Contact Section -->
+<div ng-app="contactoLegionApp" ng-include="'template/contacto.html'"></div>
+<!-- End Contact Section -->
+
+<!-- Twitter Feed -->
+<!-- <div id="twitter-feed" class="page-alternate">
+	<div class="container">
+    	<div class="row">
+            <div class="span12">
+                <div class="follow">
+                    <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
+                </div>
+
+                <div id="ticker" class="query">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Twitter Feed -->
+
+<!-- Footer -->
+<footer>
+	<p class="credits">&copy;2014 <a href="http://www.danielzamorano.com/" title="Daniel Zamorano | Front-end Developer">Daniel Zamorano</a> Improvements to Brushed template by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a></p>
+</footer>
+<!-- End Footer -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+	<i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+
+
+<!-- Js -->
+<script src="resources/jquery/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="resources/underscore/underscore-min.js"></script> <!-- jQuery Core -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap -->
+<script src="js/supersized.3.2.7.min.js"></script> <!-- Slider -->
+<script src="js/waypoints.js"></script> <!-- WayPoints -->
+<script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+<script src="js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+<script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+<script src="js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<script src="js/jquery.tweet.js"></script> <!-- Tweet -->
+<script src="js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="js/main.js"></script> <!-- Default JS -->
+<!-- End Js -->
+
 </body>
 </html>

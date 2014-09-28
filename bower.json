@@ -1,26 +1,18 @@
 {
-  "name": "theautobodyshop",
-  "version": "0.1.0",
-  "ignore": [
-    ".jshintrc",
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "bootstrap": "*",
-    "jquery": "*",
-    "vegas": "*",
-    "angular": "*",
-    "angular-route": "*",
-    "angular-animate": "*",
-    "animate.css": "*",
-    "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git"
-  },
-  "authors": [
-    "Daniel Zamorano <daniel.zamorano.m@gmail.com>"
-  ],
-  "license": "MIT"
+    "name": "Legion Automotriz",
+    "version": "1.0.0",
+    "ignore": [
+        ".jshintrc",
+        "**/.*",
+        "node_modules",
+        "resources"
+    ],
+    "dependencies": {
+        "underscore": "*",
+        "jquery": "1.9.1"
+    },
+    "authors": [
+        "Daniel Zamorano <daniel.zamorano.m@gmail.com>"
+    ],
+    "license": "MIT"
 }
