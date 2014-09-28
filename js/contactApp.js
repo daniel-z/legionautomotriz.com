@@ -64,27 +64,43 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
       };
     };
 
-    $scope.sendEmail = function(emailData) {
-      if(emailData.$invalid) {
-        return;
+    // message: optional message text
+    // status: request answer status
+    $scope.triggerFormError = function(message, status) {
+      $scope.cleanFormMessages();
+      if (message && status) {
+        $('#contact-form p.error-msg').append('status: ' + status + ' message:' + message).show();
       }
+      $('#contact-form p.error').show();
+      console.log(message, status);
+    };
 
-      console.log('test');
+    $scope.triggerFormSuccess = function() {
+      $scope.cleanFormMessages();
+      $('#contact-form p.success').show();
+      $scope.cleanForm();
+    };
+
+    $scope.cleanFormMessages = function() {
+      $('#contact-form p').hide();
+    };
+
+    $scope.sendEmail = function(emailData) {
+      if (emailData.$invalid) { return; }
+
       var email = $scope.generateEmail(emailData);
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', email).
         success(function(data, status, headers, config) {
           if(data[0].status === 'error' || data[0].status === 'rejected') {
-            $('.alert.alert-danger').show();
-            console.log(data, status);
+            $scope.triggerFormError('', status);
           }
           else if(data[0].status === 'sent') {
-            $('.alert.alert-success').show();
+            $scope.triggerFormSuccess();
           }
         }).
         error(function(data, status, headers, config) {
-          $('.alert.alert-danger').show();
-          console.log(data, status);
+            $scope.triggerFormError(data, status);
         });
     };
 

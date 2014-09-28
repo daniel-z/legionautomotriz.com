@@ -97,24 +97,25 @@
     background: #000;
     color: #DE5E60;
 }
-#contact-form.success span,
-#contact-form span {
+#contact-form p {
     display: none;
     font-size: 17px;
     padding: 10px;
     clear: both;
     margin: 5px 0;
 }
-#contact-form.ng-invalid-required span.required,
-#contact-form.error span.error {
-    display: block;
+#contact-form p.required,
+#contact-form p.error {
     color: #DE5E60;
     border: 1px solid #DE5E60;
 }
-#contact-form.success span.success {
-    display: block;
+#contact-form p.success {
     border: 1px solid #7F8289;
 }
+#contact-form.ng-invalid-required p.required {
+    display: block;
+}
+
 #contact-form .clean,
 #contact-form .submit {
     border: none;

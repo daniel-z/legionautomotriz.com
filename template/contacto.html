@@ -17,19 +17,20 @@
         <!-- Contact Form -->
         <div class="row">
           <div class="span9" ng-controller="contactController">
-            <form id="contact-form" class="contact-form" novalidate ng-submit="sendEmail(emailForm)">
-              <span class="required">
+            <form id="contact-form" name="contactForm" class="contact-form" novalidate ng-submit="sendEmail(emailForm)">
+              <p class="required">
                 ¡Por favor llene los campos requeridos correctamente (*)!.
-              </span>
-              <span class="error">
+              </p>
+              <p class="error">
                 ¡Hubo un error favor de contarctarnos al (33) 1591-1598 o al correo: ventas@legionautomotriz.com!
                 <br/>
                 Disculpe las molestias que esto pudiera ocasionarle.
-              </span>
-              <span class="success">
+              </p>
+              <p class="error-msg">Error:</p>
+              <p class="success">
                 ¡Tu correo ha sido enviado, pronto te contactaremos!
-              </span>
-              <input id="contact_name" type="text" class="form-control" placeholder="(*) Nombre"
+              </p>
+              <input id="contact_name" name="contactForm" type="text" class="form-control" placeholder="(*) Nombre"
                 ng-pattern="/^[\sa-zA-Z]+$/"
                 ng-model="emailForm.name" required />
 
