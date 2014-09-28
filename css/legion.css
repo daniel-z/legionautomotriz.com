@@ -138,6 +138,7 @@ dt {
     background-color: #C9A475;
     color: #000;
 }
+#contact-form.ng-invalid p.required,
 #contact-form.ng-invalid-required p.required {
     display: block;
 }
