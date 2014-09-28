@@ -1,12 +1,15 @@
+
 <li class="item-thumbs span3 <%= data_class %>">
     <a class="hover-wrap fancybox"
         data_fancybox-group="<%= data_group %>"
         title="<%= data_title  %>"
-        href="<%= data_href %>">
-        <span class="overlay-img">  <%= overlay_img %>  </span>
-        <span class="overlay-img-thumb font-icon-plus">
-            <%= overlay_img_thumb %>
+        href="../<%= data_href %>">
+        <span class="overlay-img">
+            <img src="<%= overlay_img %>" alt="">
+        </span>
+        <span class="overlay-img-thumb">
+            <%= overlay_img_thumb_text %>
         </span>
     </a>
-    <img src="<%= img_src %>" alt="">
+    <img src="<%= img_thumb_src %>">
 </li>

@@ -1,55 +1,19 @@
-[{
-    "data_class": "laminado",
-    "data_group": "laminado",
-    "data_title": "The City",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}, {
-    "data_class": "laminado",
-    "data_group": "laminado",
-    "data_title": "The City",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}, {
-    "data_class": "detallado",
-    "data_group": "detallado",
-    "data_title": "Detallado",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}, {
-    "data_class": "detallado",
-    "data_group": "detallado",
-    "data_title": "The City",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}, {
-    "data_class": "pintura",
-    "data_group": "pintura",
-    "data_title": "The City",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}, {
-    "data_class": "pintura",
-    "data_group": "pintura",
-    "data_title": "The City",
-    "data_href": "img/work/full/image-01-full.jpg",
-    "overlay_img": "",
-    "overlay_img_thumb": "",
-    "img_src": "img/work/thumbs/image-01.jpg",
-    "data_alt": ""
-}]
+{
+    "detallado": [
+        "Focus2007Rojo",
+        "Wrangler",
+        "Fussion2010"
+    ],
+    "laminado_pintura": [
+        "Acura",
+        "AltimaCoupe2008Rojo",
+        "AltimaPlata",
+        "Avenger2010",
+        "Mustang2000",
+        "Mustang2002Amarillo",
+        "Patriot2007Blanca",
+        "Stratus2001",
+        "Yaris2006",
+        "Camry2007"
+    ]
+}

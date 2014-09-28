@@ -117,8 +117,7 @@ jQuery(function ($) {
     // --------------------------------------------------
 
     BRUSHED.filter = function () {
-        var portfolio = '',
-            initializeFilter = function () {
+        var initializeFilter = function () {
                 if ($('#projects').length > 0) {
                     var $container = $('#projects');
 
@@ -167,6 +166,23 @@ jQuery(function ($) {
         $.getJSON('data/portfolio.json', function (portfolioData) {
             // get the template html
             var templateHTML;
+            defaultPortfolioFolder = 'img/portfolio/';
+            defaultExtention = '.jpg';
+            portfolioTemplateData = [];
+            $.each(portfolioData, function(category, items) {
+                $.each(items, function(index, imageName) {
+                    portfolioTemplateData.push({
+                        "data_class": category,
+                        "data_group": "",
+                        "data_title": "",
+                        "img_thumb_src": defaultPortfolioFolder + imageName + defaultExtention,
+                        "data_href": defaultPortfolioFolder + imageName + 'Final' + defaultExtention,
+                        "overlay_img": defaultPortfolioFolder + imageName + 'Final' + defaultExtention,
+                        "overlay_img_thumb_text": "",
+                        "data_alt": ""
+                    });
+                });
+            });
 
             // load portfolio items
             $.ajax({
@@ -174,7 +190,7 @@ jQuery(function ($) {
                 dataType: 'html',
                 success: function (templateHTML) {
                     var tmp = _.template(templateHTML);
-                    $.each(portfolioData, function (index, project) {
+                    $.each(portfolioTemplateData, function (index, project) {
                         $('#projects #thumbs').append(tmp(project));
                     });
                     initializeFilter();
