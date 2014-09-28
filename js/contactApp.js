@@ -82,13 +82,26 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
     };
 
     $scope.cleanFormMessages = function() {
-      $('#contact-form p').hide();
+      $('#contact-form .contact-form-messages p').hide();
+    };
+
+    $scope.formSendInProgress = function() {
+      $('#contact.page .spinner').show();
+      $('#contact.page #contact-form .contact-form-messages').hide();
+      $scope.cleanFormMessages();
+      $('#contact.page #contact-form fieldset').hide();
+    };
+
+    $scope.formSendDone = function() {
+      $('#contact.page .spinner').hide();
+      $('#contact.page #contact-form .contact-form-messages').show();
     };
 
     $scope.sendEmail = function(emailData) {
       if (emailData.$invalid) { return; }
 
       var email = $scope.generateEmail(emailData);
+      $scope.formSendInProgress();
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', email).
         success(function(data, status, headers, config) {
@@ -98,10 +111,12 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
           else if(data[0].status === 'sent') {
             $scope.triggerFormSuccess();
           }
+          setTimeout($scope.formSendDone, 300);
         }).
         error(function(data, status, headers, config) {
             $scope.triggerFormError(data, status);
-        });
+            setTimeout($scope.formSendDone, 300);
+       });
     };
 
   }]);
