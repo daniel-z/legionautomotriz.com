@@ -7,10 +7,6 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
 
     $scope.emailForm = {};
 
-    $scope.cleanForm = function() {
-      $scope.emailForm = {};
-    };
-
     $scope.generateMessage = function(emailData) {
       var
       name = "Nombre: " + emailData.name,
