@@ -66,35 +66,43 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
 
     // message: optional message text
     // status: request answer status
-    $scope.triggerFormError = function(message, status) {
-      $scope.cleanFormMessages();
-      if (message && status) {
-        $('#contact-form p.error-msg').append('status: ' + status + ' message:' + message).show();
-      }
-      $('#contact-form p.error').show();
+    $scope.showErrorMessage = function() {
+      $('#general-form-messages p.error').show();
+      $('#general-form-messages p.success').hide();
+      $('#general-form-messages').show();
       console.log(message, status);
+    }
+    $scope.showSuccessMessage = function() {
+      $('#general-form-messages p.success').show();
+      $('#general-form-messages p.error').hide();
+      $('#general-form-messages').show();
+    }
+    $scope.hideGeneralMessages = function() {
+      $('#general-form-messages p').hide();
+    }
+
+    $scope.showSpinner = function() {
+      $('#contact.page .spinner').show();
+    }
+    $scope.hideSpinner = function() {
+      $('#contact.page .spinner').hide();
+    }
+
+    $scope.hideForm = function() {
+      $('#contact-form').hide();
+    }
+    $scope.showForm = function() {
+      $('#contact-form').show();
     };
 
-    $scope.triggerFormSuccess = function() {
-      $scope.cleanFormMessages();
-      $('#contact-form p.success').show();
-      $scope.cleanForm();
-    };
-
-    $scope.cleanFormMessages = function() {
-      $('#contact-form .contact-form-messages p').hide();
+    $scope.tryAgain = function() {
+      $scope.hideGeneralMessages();
+      $scope.showForm();
     };
 
     $scope.formSendInProgress = function() {
-      $('#contact.page .spinner').show();
-      $('#contact.page #contact-form .contact-form-messages').hide();
-      $scope.cleanFormMessages();
-      $('#contact.page #contact-form fieldset').hide();
-    };
-
-    $scope.formSendDone = function() {
-      $('#contact.page .spinner').hide();
-      $('#contact.page #contact-form .contact-form-messages').show();
+      $scope.hideForm();
+      $scope.showSpinner();
     };
 
     $scope.sendEmail = function(emailData) {
@@ -105,17 +113,17 @@ contactoLegionApp.controller('contactController', ['$scope', '$http',
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', email).
         success(function(data, status, headers, config) {
+          $scope.hideSpinner();
           if(data[0].status === 'error' || data[0].status === 'rejected') {
-            $scope.triggerFormError('', status);
+            $scope.showErrorMessage();
           }
           else if(data[0].status === 'sent') {
-            $scope.triggerFormSuccess();
+            $scope.showSuccessMessage();
           }
-          setTimeout($scope.formSendDone, 300);
         }).
         error(function(data, status, headers, config) {
-            $scope.triggerFormError(data, status);
-            setTimeout($scope.formSendDone, 300);
+          $scope.hideSpinner();
+          $scope.showErrorMessage();
        });
     };
 

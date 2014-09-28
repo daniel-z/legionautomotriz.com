@@ -107,44 +107,66 @@ dt {
     background: #000;
     color: #DE5E60;
 }
-#contact-form p {
+#general-form-messages,
+#contact-form p.required {
     display: none;
+}
+
+#contact-form p {
     font-size: 17px;
     padding: 10px;
     clear: both;
     margin: 5px 0;
 }
 #contact-form p.required,
-#contact-form p.error {
+#general-form-messages p.error {
     color: #DE5E60;
     border: 1px solid #DE5E60;
 }
-#contact-form p.success {
+#general-form-messages p.error {
+    background-color: #DE5E60;
+    color: #000;
+    border: 1px solid #DE5E60;
+}
+#general-form-messages p.error,
+#general-form-messages p.success {
+    padding: 55px;
+    text-align: center;
+}
+#general-form-messages p.success {
     border: 1px solid #7F8289;
     background-color: #C9A475;
     color: #000;
-    padding: 55px;
-    text-align: center;
 }
 #contact-form.ng-invalid-required p.required {
     display: block;
 }
 
-#contact-form .clean,
-#contact-form .submit {
+#contact input[type="button"].try-again {
+    display: block;
+    margin: 10px auto;
+    color: #fff;
+    border: 1px solid #000;
+}
+#contact input[type="button"].try-again:hover {
+    border: 1px solid #fff;
+}
+
+#contact .clean,
+#contact .submit {
     border: none;
 }
-#contact-form .submit[disabled],
-#contact-form .submit[disabled]:hover {
+#contact .submit[disabled],
+#contact .submit[disabled]:hover {
     color: #4F5053;
     background-color: #3C3F45;
 }
-#contact-form .clean:hover {
+#contact .clean:hover {
     background: #b9b9b9;
     color: #000;
 }
-#contact-form .clean,
-#contact-form .submit {
+#contact .clean,
+#contact .submit {
     background: #3C3F45;
     color: #23262C;
     cursor: pointer;
@@ -163,8 +185,8 @@ dt {
             transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
-#contact-form .clean:hover,
-#contact-form .submit:hover {
+#contact .clean:hover,
+#contact .submit:hover {
     background: #DE5E60;
     color: #FFFFFF;
 }
@@ -221,4 +243,14 @@ dt {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
+}
+
+#google-map {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#google-map iframe {
+    margin-top: -60px;
+    width: 100%;
 }
