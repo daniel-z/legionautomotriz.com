@@ -6,6 +6,36 @@
 dt {
     margin-top: 10px;
 }
+
+a#check-order {
+    background: #3C3F45;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    margin-top: 30px;
+
+    -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+       -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+         -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+            transition: background 0.1s linear 0s, color 0.1s linear 0s;
+
+    position: fixed;
+    top: 35px;
+    right: 0;
+    z-index: 1002;
+    color: #fff;
+    box-shadow: 0 0 25px #000;
+    color: #5CFF00;
+}
+a#check-order:hover {
+    color: #FFF;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------
     Home Slider Styles
@@ -167,6 +197,7 @@ dt {
     color: #000;
 }
 #contact .clean,
+a#chech-order,
 #contact .submit {
     background: #3C3F45;
     color: #23262C;
