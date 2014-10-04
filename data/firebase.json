@@ -1,0 +1,75 @@
+{
+    "users": [{
+        "id": 1,
+        "name": "Daniel Zamorano",
+        "username": "danielzm",
+        "pass": "mypass"
+    }],
+    "customers": [{
+        "id": 1,
+        "name": "test",
+        "carsID": [
+            1
+        ]
+    }],
+    "cars": [{
+        "id": 1,
+        "brand": "Nissan",
+        "model": "Altima",
+        "year": "2010",
+        "customerID": 1
+    }],
+    "roles": [{
+        "id": 1,
+        "name": "admin"
+    }, {
+        "id": 2,
+        "name": "customer"
+    }, {
+        "id": 3,
+        "name": "user"
+    }],
+    "orders": [{
+        "id": "1234",
+        "carID": 1,
+        "start-date": {
+            "year": "2014",
+            "month": "04",
+            "day": "12"
+        },
+        "pickup-date": {
+            "year": "2014",
+            "month": "04",
+            "day": "16"
+        },
+        "services": [{
+            "name": "Laminado y pintura facia delantera",
+            "costo": "900",
+            "descuento": "50",
+            "total": "850"
+        }, {
+            "name": "Laminado y pintura facia trasera",
+            "costo": "900",
+            "descuento": "100",
+            "total": "800"
+        }, {
+            "name": "Laminado y pintura puerta derecha",
+            "costo": "900",
+            "descuento": "0",
+            "total": "900"
+        }, {
+            "name": "Pulido general",
+            "costo": "1200",
+            "descuento": "0",
+            "total": "1200"
+        }],
+        "total": 3750,
+        "pictures": [
+            "img/1/01.jpg",
+            "img/1/02.jpg",
+            "img/1/03.jpg",
+            "img/1/04.jpg",
+            "img/1/05.jpg"
+        ]
+    }]
+}
