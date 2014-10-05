@@ -1,45 +1,141 @@
+/*
+----------------------------------------------------------------------------------------------------
+ The Cube Styles
+----------------------------------------------------------------------------------------------------
+*/
 
+/*
+----------------------------------
+ General Styles
+----------------------------------
+*/
 
 .hidden {
     display: none;
 }
+
 dt {
     margin-top: 10px;
 }
 
-a#check-order {
-    background: #3C3F45;
-    cursor: pointer;
+.small-button {
+    padding: 0px 9px;
     display: inline-block;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 16px 40px;
-    text-align: center;
-    vertical-align: middle;
-    width: auto;
-    margin-top: 30px;
-
-    -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
-       -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
-         -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
-            transition: background 0.1s linear 0s, color 0.1s linear 0s;
-
-    position: fixed;
-    top: 35px;
-    right: 0;
-    z-index: 1002;
-    color: #fff;
-    box-shadow: 0 0 25px #000;
-    color: #5CFF00;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7F8289;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 800;
 }
-a#check-order:hover {
-    color: #FFF;
+.small-button:hover {
+    border-color: #fff;
+    color: #fff;
 }
 
 /*
-----------------------------------------------------------------------------------------------------
+----------------------------------
+ Check Order Styles
+----------------------------------
+*/
+a#check-order {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    right: 0;
+    border-radius: 0 0 5px 8px;
+    padding: 10px 32px;
+    box-shadow: 0 0 25px #000;
+}
+a#check-order-sticky {
+    position: relative;
+    top: 11px;
+    padding: 7px 28px;
+    border-radius: 5px;
+    float: right;
+    margin-left: 45px;
+}
+
+#order-status {
+    position: fixed;
+}
+@media (max-width: 767px) {
+    #order-status {
+        margin-left: -20px;
+    }
+}
+
+#order-status .modal-header {
+    background-color: #3C3F45;
+}
+#order-status h3 {
+    text-align: center;
+}
+
+#order-status .close.small-button {
+    position: absolute;
+    right: 20px;
+    color: #FFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #7F8289;
+    border-radius: 4px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    line-height: initial;
+    padding-right: 10px;
+}
+#order-status .close.small-button:hover {
+    color: #fff;
+}
+
+.order-info {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+#order-status dl.order-data-item {
+    padding: 5px 0;
+    overflow: auto;
+    width: 40%;
+    margin: 0 5px;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 767px) {
+    #order-status dl.order-data-item {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+}
+#order-status dl.order-data-item.order-id {
+    width: 100%;
+}
+#order-status dl.order-data-item dd,
+#order-status dl.order-data-item dt {
+    display: inline-block;
+    float: left;
+    padding-right: 20px;
+    margin: 0;
+    width: 50%;
+    box-sizing: border-box;
+}
+#order-status dl.order-data-item dd {
+    text-align: right;
+}
+#order-status .progress {
+    margin-bottom: 2px
+}
+
+/*
+----------------------------------
     Home Slider Styles
-----------------------------------------------------------------------------------------------------
+----------------------------------
 */
 #home-slider .slide-content {
     color: #fff;
@@ -119,18 +215,18 @@ a#check-order:hover {
 }
 
 /*
-----------------------------------------------------------------------------------------------------
+----------------------------------
     Portfolio Styles
-----------------------------------------------------------------------------------------------------
+----------------------------------
 */
 #projects #thumbs .item-thumbs .overlay-img img {
     width: inherit;
 }
 
 /*
-----------------------------------------------------------------------------------------------------
+----------------------------------
     Contact Form Styles
-----------------------------------------------------------------------------------------------------
+----------------------------------
 */
 #contact-form input.ng-invalid {
     border: 1px dashed #DE5E60;
@@ -197,7 +293,6 @@ a#check-order:hover {
     color: #000;
 }
 #contact .clean,
-a#chech-order,
 #contact .submit {
     background: #3C3F45;
     color: #23262C;

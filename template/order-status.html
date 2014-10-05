@@ -1,3 +1,55 @@
-<div class="order-status">
+<div id="order-status" class="modal hide fade" ng-controller="cubeOrderCheckController">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3> Estado de la Orden </h3>
+  </div>
+  <div class="modal-body">
+    <div class="order-info">
+            <dl class="order-data-item order-id">
+                <dd>Order ID:</dd>
+                <dt>{{order.OrderID}}</dt>
+            </dl>
 
+            <dl class="order-data-item">
+                <dd>Inicio:</dd>
+                <dt>{{order.FInicio}}</dt>
+            </dl>
+
+            <dl class="order-data-item span3">
+                <dd>Entrega:</dd>
+                <dt>{{order.FEntrega}}</dt>
+            </dl>
+
+            <div class="span6">
+                <div class="progress active success">
+                    <span class="bar" style="width:{{order.Progress}}%;"></span>
+                </div>
+                <span>Progreso Total: {{order.Progress}}%</span>
+            </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
 </div>
+<!--
+
+                    <div id="progress" class="row">
+                        <div class="span1"></div>
+                        <div class="span10">
+
+                        </div>
+                        <div class="span1"></div>
+                    </div>
+
+                    <ul id="car-photos">
+                        <li ng-repeat="image in order.images" class="car-photo">
+                            <img ng-src="{{order.image.name}}" src="" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

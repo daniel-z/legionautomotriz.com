@@ -1,9 +1,55 @@
+// (function ($) {
+//     var ordersData;
+
+//     var getOrderData = function (orderID) {
+//         $.get("https://data.brace.io/ss/pdmo34M7zagGsT5T9TGmWN", function (ordersData) {
+//             var order = searchOrder(ordersData, orderID);
+//             console.log(order);
+//         });
+//     };
+
+//     var searchOrder = function (ordersData, orderID) {
+//         var order = {};
+//         $.each(ordersData.rows, function (index, orderObj) {
+//             if (orderObj.OrderID === parseInt(orderID)) {
+//                 order = orderObj;
+//             }
+//             return;
+//         });
+//         return order;
+//     };
+
+//     $('#check-order').on('click', function(event){
+//         event.preventDefault();
+
+//     });
+//     window.getOrderData = getOrderData;
+
+// })($);
+
+
 /* global angular, $ */
 
-var contactoLegionApp = angular.module('contactoLegionApp', []);
+var theCubeApp = angular.module('theCubeApp', []);
 
-contactoLegionApp.controller('contactController', ['$scope', '$http',
-  function ($scope, $http) {
+theCubeApp.controller('cubeOrderCheckController', ['$scope', '$http',
+    function ($scope, $http) {
+    $scope.order = {
+        OrderID: 1234,
+        FInicio: '2014-01-05',
+        FEntrega: '2014-01-08',
+        cliente: '101',
+        auto: 'Altima 2013',
+        Progress: 20
+    }
+
+
+
+}]);
+
+
+theCubeApp.controller('cubeContactController', ['$scope', '$http',
+    function ($scope, $http) {
 
     $scope.emailForm = {};
 
