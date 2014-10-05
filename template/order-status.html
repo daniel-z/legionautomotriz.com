@@ -1,15 +1,10 @@
 <div id="order-status" class="modal hide fade" ng-controller="cubeOrderCheckController">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3> Estado de la Orden </h3>
+    <h3> Estado de la Orden #{{order.OrderID}} </h3>
   </div>
   <div class="modal-body">
     <div class="order-info">
-            <dl class="order-data-item order-id">
-                <dd>Order ID:</dd>
-                <dt>{{order.OrderID}}</dt>
-            </dl>
-
             <dl class="order-data-item">
                 <dd>Inicio:</dd>
                 <dt>{{order.FInicio}}</dt>
@@ -20,11 +15,11 @@
                 <dt>{{order.FEntrega}}</dt>
             </dl>
 
-            <div class="span6">
+            <div class="progress-section">
                 <div class="progress active success">
                     <span class="bar" style="width:{{order.Progress}}%;"></span>
                 </div>
-                <span>Progreso Total: {{order.Progress}}%</span>
+                <span class="pg-label">Progreso Total: {{order.Progress}}%</span>
             </div>
     </div>
   </div>

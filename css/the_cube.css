@@ -128,8 +128,30 @@ a#check-order-sticky {
 #order-status dl.order-data-item dd {
     text-align: right;
 }
+#order-status .progress-section {
+    margin-top: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: visible;
+}
+
+#order-status .progress-section .progress,
+#order-status .progress-section span.pg-label {
+    display: inline-block;
+    float: left;
+    line-height: initial;
+    height: 26px;
+}
+
 #order-status .progress {
+    width: 60%;
     margin-bottom: 2px
+}
+#order-status .progress-section span.pg-label {
+    width: 35%;
+    margin-left: 10px;
+    color: #0C90D2;
 }
 
 /*
