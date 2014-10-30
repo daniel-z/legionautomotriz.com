@@ -11,6 +11,19 @@ dt {
     Home Slider Styles
 ----------------------------------------------------------------------------------------------------
 */
+
+header .sticky-nav {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#home-slider .promo a {
+    background-color: #DE5E60;
+    color: #fff;
+    font-size: .7em;
+}
+
 #home-slider .slide-content {
     color: #fff;
     font-weight: normal;
@@ -254,4 +267,54 @@ dt {
 #google-map iframe {
     margin-top: -60px;
     width: 100%;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+    Promos Styles
+----------------------------------------------------------------------------------------------------
+*/
+#promos {
+    padding-top: 0px;
+}
+#promos header {
+    margin: 0;
+    background-color: #26292E;
+}
+#promos header .logo-wrapper img {
+    width: 100%;
+    max-width: 140px;
+}
+#promos header nav {
+    padding: 47px;
+}
+#promos header nav a:hover {
+    background-color: #DE5E60;
+}
+@media (max-width: 767px) {
+    #promos header .logo-wrapper {
+        text-align: center;
+    }
+    #promos header .logo-wrapper img {
+        width: 31%;
+    }
+    #promos header nav {
+        padding: 10px;
+        text-align: center;
+    }
+}
+#promos h2 {
+    font-size: 2em;
+}
+#promos .title-page {
+    margin-bottom: 0;
+}
+#promos nav a {
+    padding: 15px;
+}
+#promos .page {
+    padding-top: 0;
+}
+#promos .page .container {
+    margin-top: 25px;
 }
