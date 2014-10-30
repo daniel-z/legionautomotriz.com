@@ -11,6 +11,19 @@ dt {
     Home Slider Styles
 ----------------------------------------------------------------------------------------------------
 */
+
+header .sticky-nav {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#home-slider .promo a {
+    background-color: #DE5E60;
+    color: #fff;
+    font-size: .7em;
+}
+
 #home-slider .slide-content {
     color: #fff;
     font-weight: normal;
