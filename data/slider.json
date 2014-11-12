@@ -4,12 +4,6 @@
     "title": "Tenemos excelentes promociones en: <br/> <a href='elbuenfin.html'><img src='img/slider/LogoBF.png' alt='el buen fin' width='200px'/><a/>",
     "thumb": "",
     "url": "promos.html"
-},{
-    "title_class": "promo",
-    "image": "img/slider/red_bmw.jpg",
-    "title": "Aprovecha Nuestra<br/> <a class='button' href='promos.html'>Promoci&oacute;n de Pintura Mensual<a/>",
-    "thumb": "",
-    "url": "promos.html"
 }, {
     "title_class": "promo",
     "image": "img/slider/black_rims.jpg",
