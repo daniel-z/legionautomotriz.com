@@ -1,55 +1,55 @@
 [{
-    "title_class": "promo",
-    "image": "img/slider/LegionBuenFinPortada.jpg",
-    "title": "Tenemos excelentes promociones en: <br/> <a href='elbuenfin.html'><img src='img/slider/LogoBF.png' alt='el buen fin' width='200px'/><a/>",
-    "thumb": "",
-    "url": "promos.html"
+  "title_class": "promo dic",
+  "image": "img/slider/Legion-PromoDic2014.jpg",
+  "title": "<a class='attention button promo' href='promos.html'>Promo Fin de Año!!!<a/>",
+  "thumb": "",
+  "url": "promos.html"
 }, {
-    "title_class": "promo",
-    "image": "img/slider/black_rims.jpg",
-    "title": "Plastifica tu rodado desde <em>$1,800!</em> <br/> escoge el color y diseño que prefieras",
-    "thumb": "",
-    "url": ""
+  "title_class": "promo",
+  "image": "img/slider/black_rims.jpg",
+  "title": "Plastifica tu rodado desde <em>$1,800!</em> <br/> escoge el color y diseño que prefieras",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "promo",
-    "image": "img/portfolio/WranglerFinal.jpg",
-    "title": "¡¡Contactanos!!, <br/> dejanos tus datos y recibe promociones especiales por inauguración",
-    "thumb": "",
-    "url": ""
+  "title_class": "promo",
+  "image": "img/portfolio/WranglerFinal.jpg",
+  "title": "¡¡Contactanos!!, <br/> dejanos tus datos y recibe promociones especiales por inauguración",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/Focus2007RojoFinal.jpg",
-    "title": "Mientras existan individuos encendidos, comprometidos, preocupados, el contagio continuará, poco a poco, y a empujones como todo lo que vale la pena. Y México será otro país, otro. <br/><br/> - Denise Dresser",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/Focus2007RojoFinal.jpg",
+  "title": "Mientras existan individuos encendidos, comprometidos, preocupados, el contagio continuará, poco a poco, y a empujones como todo lo que vale la pena. Y México será otro país, otro. <br/><br/> - Denise Dresser",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/Mustang2000Final.jpg",
-    "title": "Aquel que no espera vencer, ya esta vencido.<br/><br/> - Benito Juarez",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/Mustang2000Final.jpg",
+  "title": "Aquel que no espera vencer, ya esta vencido.<br/><br/> - Benito Juarez",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/Fussion2010Final.jpg",
-    "title": "No es heroe el que carece de miedo. Lo es quien lo siente, lo enfrenta y lo supera.<br/><br/> -Roberto Gomez Bolaños",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/Fussion2010Final.jpg",
+  "title": "No es heroe el que carece de miedo. Lo es quien lo siente, lo enfrenta y lo supera.<br/><br/> -Roberto Gomez Bolaños",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/AcuraFinal.jpg",
-    "title": "Amo el canto del zenzontle pajaro de 400 voces, amo el color del jade, y el enervante perfume de las flores, pero amo más a mi hermano, el hombre.<br/><br/> - Nezahualcoyotl.",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/AcuraFinal.jpg",
+  "title": "Amo el canto del zenzontle pajaro de 400 voces, amo el color del jade, y el enervante perfume de las flores, pero amo más a mi hermano, el hombre.<br/><br/> - Nezahualcoyotl.",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/Camry2007Final.jpg",
-    "title": "El arte más poderoso de la vida, es hacer del dolor un talismán que cura. ¡Una mariposa renace florecida en fiesta de colores!<br/><br/> - Frida Kahlo",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/Camry2007Final.jpg",
+  "title": "El arte más poderoso de la vida, es hacer del dolor un talismán que cura. ¡Una mariposa renace florecida en fiesta de colores!<br/><br/> - Frida Kahlo",
+  "thumb": "",
+  "url": ""
 }, {
-    "title_class": "",
-    "image": "img/portfolio/Yaris2006Final.jpg",
-    "title": " La única forma de generar riqueza es a través de la educación. Y la única manera para salir adelante es el trabajo y estar al pendiente de él.<br/><br/>  - Carlos Kasuga",
-    "thumb": "",
-    "url": ""
+  "title_class": "",
+  "image": "img/portfolio/Yaris2006Final.jpg",
+  "title": " La única forma de generar riqueza es a través de la educación. Y la única manera para salir adelante es el trabajo y estar al pendiente de él.<br/><br/>  - Carlos Kasuga",
+  "thumb": "",
+  "url": ""
 }]
